@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPage {
-	private  WebDriver driver;
+	private WebDriver driver;
 
 	private By click_signIn = By.xpath("//a[contains(text(),'Sign in')]");
 	private By emailId = By.xpath("//input[@id='email']");
@@ -36,13 +36,12 @@ public class LoginPage {
 		driver.findElement(click_LoginButton).click();
 	}
 
-	/*
-	 * public AccountPage doLogin(String usn, String psd) {
-	 * driver.findElement(emailId).sendKeys(usn);
-	 * driver.findElement(password).sendKeys(psd);
-	 * driver.findElement(click_LoginButton).click();
-	 * 
-	 * return new AccountPage(driver); }
-	 */
+	public AccountPage doLogin(String usn, String psd) {
+		driver.findElement(emailId).sendKeys(usn);
+		driver.findElement(password).sendKeys(psd);
+		driver.findElement(click_LoginButton).click();
+
+		return new AccountPage(driver);
+	}
 
 }

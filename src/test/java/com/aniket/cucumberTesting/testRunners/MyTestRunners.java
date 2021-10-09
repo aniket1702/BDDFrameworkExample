@@ -15,7 +15,9 @@ import io.cucumber.junit.CucumberOptions;
 		glue={"com.aniket.cucumberTesting.stepDefinitions","com.aniket.cucumberTesting.appHooks"},
 		plugin= {"pretty","html:test-output/","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
 		dryRun = false, 
-		monochrome = true
+		monochrome = false,
+		strict = true
+		
 		)
 
 

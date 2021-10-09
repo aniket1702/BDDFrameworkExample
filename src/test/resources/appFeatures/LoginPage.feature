@@ -5,13 +5,11 @@ Feature: Test Login Functionlity
     When user gets title of the page
     Then page title should be "My Store"
 
-  
   Scenario: Login Page
-  Given user is on Login Page
+    Given user is on Login Page
     When user gets title of the page
     Then page title should be "Login - My Store"
-    
-  
+
   Scenario: Login with correct credentials
     Given user is on Login Page
     When user enters username as "tyitproject2019@gmail.com"

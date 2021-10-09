@@ -91,7 +91,7 @@
 		<!-- <dependency> <groupId>com.aventstack</groupId> <artifactId>extentreports</artifactId> 
 			<version>5.0.9</version> </dependency> -->
 
-	
+
 		<dependency>
 			<groupId>tech.grasshopper</groupId>
 			<artifactId>extentreports-cucumber5-adapter</artifactId>
@@ -121,7 +121,13 @@
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.0.0-M3</version>
 					<configuration>
-						<includes>**/*MyTestRunners.java</includes>
+						<includes>
+							<include>**/MyTestRunners.java</include>
+						</includes>
+						<parallel>methods</parallel>
+						<threadCount>4</threadCount>
+						<perCoreThreadCount>true</perCoreThreadCount>
+						<useUnlimitedThreads>false</useUnlimitedThreads>
 					</configuration>
 				</plugin>
 				<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 

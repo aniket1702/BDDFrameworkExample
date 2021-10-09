@@ -56,7 +56,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 9, 2021 02:59:37 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 9, 2021 07:24:44 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -114,7 +114,7 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
@@ -128,7 +128,7 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>2</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>4</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -144,7 +144,7 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>15</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>23</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
@@ -169,8 +169,8 @@
 			<ul id='test-collection' class='test-collection'>
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
-						<span class='test-name'>Test Login Functionlity</span>
-						<span class='test-time'>Oct 9, 2021 02:59:45 PM</span>
+						<span class='test-name'>Account Page Feature</span>
+						<span class='test-time'>Oct 9, 2021 07:24:55 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -181,76 +181,139 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='scenario node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 9s+688ms</span>
+	<span class='duration right label'>0h 0m 6s+571ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Account Page Title</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='5' class='node given pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_has_already_logged_in_to_an_application(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has already logged in to an application</div>
+			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>tyitproject2019@gmail.com</td><td>Selenium@12345</td></tr></table></div>
+		</li>
+		<li test-id='6' class='node given pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_is_on_Accounts_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Accounts Page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='7' class='node when pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user gets title of the page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='8' class='node then pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then page title should be "My account - My Store"</div>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+<div class='scenario node' test-id='11' status='pass'>
+	<span class='duration right label'>0h 0m 8s+593ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Accounts section count</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='14' class='node given pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_has_already_logged_in_to_an_application(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has already logged in to an application</div>
+			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>tyitproject2019@gmail.com</td><td>Selenium@12345</td></tr></table></div>
+		</li>
+		<li test-id='15' class='node given pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_is_on_Accounts_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Accounts Page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='16' class='node then pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_gets_accounts_section(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user gets accounts section</div>
+			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>ORDER HISTORY AND DETAILS</td></tr><tr><td>MY CREDIT SLIPS</td></tr><tr><td>MY ADDRESSES</td></tr><tr><td>MY PERSONAL INFORMATION</td></tr><tr><td>MY WISHLISTS</td></tr></table></div>
+		</li>
+		<li test-id='17' class='node and pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.accounts_section_count_should_be(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And accounts section count should be 5</div>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='20'>
+					<div class='test-heading'>
+						<span class='test-name'>Test Login Functionlity</span>
+						<span class='test-time'>Oct 9, 2021 07:25:22 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='21' status='pass'>
+	<span class='duration right label'>0h 0m 8s+619ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Login Page</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='5' class='node given pass' status='pass'>
+		<li test-id='24' class='node given pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_is_on_Home_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Home Page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='6' class='node when pass' status='pass'>
+		<li test-id='25' class='node when pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user gets title of the page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='7' class='node then pass' status='pass'>
+		<li test-id='26' class='node then pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then page title should be "My Store"</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='8' class='node given pass' status='pass'>
+		<li test-id='27' class='node given pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_is_on_Login_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Login Page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='9' class='node when pass' status='pass'>
+		<li test-id='28' class='node when pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user gets title of the page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='10' class='node then pass' status='pass'>
+		<li test-id='29' class='node then pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then page title should be "Login - My Store"</div>
 			<div class="node-step"></div>
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='13' status='pass'>
-	<span class='duration right label'>0h 0m 14s+906ms</span>
+<div class='scenario node' test-id='32' status='pass'>
+	<span class='duration right label'>0h 0m 10s+154ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Login with correct credentials</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='16' class='node given pass' status='pass'>
+		<li test-id='35' class='node given pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_is_on_Home_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Home Page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='17' class='node when pass' status='pass'>
+		<li test-id='36' class='node when pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user gets title of the page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='18' class='node then pass' status='pass'>
+		<li test-id='37' class='node then pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then page title should be "My Store"</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='19' class='node given pass' status='pass'>
+		<li test-id='38' class='node given pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_is_on_Login_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Login Page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='20' class='node when pass' status='pass'>
+		<li test-id='39' class='node when pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_enters_username_as(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters username as "tyitproject2019@gmail.com"</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='21' class='node and pass' status='pass'>
+		<li test-id='40' class='node and pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_enters_password_as(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user enters password as "Selenium@12345"</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='22' class='node and pass' status='pass'>
+		<li test-id='41' class='node and pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_clicks_on_Login_button()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And user clicks on Login button</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='23' class='node then pass' status='pass'>
+		<li test-id='42' class='node then pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user gets title of the page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='24' class='node and pass' status='pass'>
+		<li test-id='43' class='node and pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And page title should be "My account - My Store"</div>
 			<div class="node-step"></div>
 		</li>
@@ -286,37 +349,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
-				</div>
-			</div>
-			<div class='col s2'>
-				<div class='card-panel r'>
-					Scenarios
 					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
+					Scenarios
+					<div class='panel-lead'>4</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>15</div>
+					<div class='panel-lead'>23</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 9, 2021 02:59:37 PM</div>
+					<div class='panel-lead'>Oct 9, 2021 07:24:44 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 9, 2021 03:00:15 PM</div>
+			 		<div class='panel-lead'>Oct 9, 2021 07:25:47 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 38s+898ms</div>
+					<div class='panel-lead'>0h 1m 3s+3ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -355,16 +418,16 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
-				passParent: 1,
+                parentCount: 2,
+				passParent: 2,
 				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
 				exceptionsParent: 0,
-				childCount: 2,
-				passChild: 2,
+				childCount: 4,
+				passChild: 4,
 				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
@@ -373,8 +436,8 @@
 				infoChild: 0,
 				debugChild: 0,
 				exceptionsChild: 0,
-				grandChildCount: 15,
-				passGrandChild: 15,
+				grandChildCount: 23,
+				passGrandChild: 23,
 				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
@@ -387,7 +450,7 @@
 		</script>
 		<script>
 			var timeline = {
-			        "Test Login Functionlity":29.493
+			        "Account Page Feature":21.589,"Test Login Functionlity":23.669
 			};
 		</script>
 	
