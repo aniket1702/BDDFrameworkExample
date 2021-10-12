@@ -382,8 +382,7 @@ formatter.match({
   "location": "com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page(GETWomenProductsListSteps.java:27)\r\n\tat ✽.user is on women category page(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/WomenProductList.feature:8)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "User should be on Women category Page.",
@@ -398,7 +397,7 @@ formatter.match({
   "location": "com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "page title should be \"Women - My Store\"",
@@ -408,9 +407,8 @@ formatter.match({
   "location": "com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "User_should_be_on_Women_category_Page.");
 formatter.after({
   "status": "passed"
 });
@@ -450,8 +448,7 @@ formatter.match({
   "location": "com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page(GETWomenProductsListSteps.java:27)\r\n\tat ✽.user is on women category page(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/WomenProductList.feature:8)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.scenario({
   "name": "User can see list of women products.",
@@ -466,9 +463,8 @@ formatter.match({
   "location": "com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_gets_list_of_women_products()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
-formatter.embedding("image/png", "embedded1.png", "User_can_see_list_of_women_products.");
 formatter.after({
   "status": "passed"
 });

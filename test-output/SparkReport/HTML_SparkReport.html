@@ -47,8 +47,7 @@
 		<!-- slideout menu -->
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
-						<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
-			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
 		<span class='report-name'>Selenix Test Reports</span>
@@ -57,7 +56,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Oct 12, 2021 12:06:07 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Oct 12, 2021 01:20:27 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -73,8 +72,6 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
-					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
-					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -117,10 +114,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>2</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>3</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -131,10 +128,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='66.667%'><span class='strong'>4</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>6</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='33.333%'>2</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -147,12 +144,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='84.375%'><span class='strong'>27</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>30</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='6.25%'>2</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='9.375%'>3</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='9.375%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
             </div>
         </div>
@@ -173,7 +170,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
 					<div class='test-heading'>
 						<span class='test-name'>Account Page Feature</span>
-						<span class='test-time'>Oct 12, 2021 12:06:37 PM</span>
+						<span class='test-time'>Oct 12, 2021 01:20:51 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -184,7 +181,7 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='scenario node' test-id='2' status='pass'>
-	<span class='duration right label'>0h 0m 12s+91ms</span>
+	<span class='duration right label'>0h 0m 13s+959ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Account Page Title</div>
 	</div>
@@ -208,7 +205,7 @@
 	</ul>
 </div>
 <div class='scenario node' test-id='11' status='pass'>
-	<span class='duration right label'>0h 0m 11s+704ms</span>
+	<span class='duration right label'>0h 0m 8s+547ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Accounts section count</div>
 	</div>
@@ -236,7 +233,7 @@
 				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='20'>
 					<div class='test-heading'>
 						<span class='test-name'>Test Login Functionlity</span>
-						<span class='test-time'>Oct 12, 2021 12:07:24 PM</span>
+						<span class='test-time'>Oct 12, 2021 01:21:27 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -247,7 +244,7 @@
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
 <div class='scenario node' test-id='21' status='pass'>
-	<span class='duration right label'>0h 0m 9s+10ms</span>
+	<span class='duration right label'>0h 0m 10s+931ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Login Page</div>
 	</div>
@@ -279,7 +276,7 @@
 	</ul>
 </div>
 <div class='scenario node' test-id='32' status='pass'>
-	<span class='duration right label'>0h 0m 11s+91ms</span>
+	<span class='duration right label'>0h 0m 13s+848ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Login with correct credentials</div>
 	</div>
@@ -324,11 +321,11 @@
 </div>
 					</div>
 				</li>
-				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='46'>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='46'>
 					<div class='test-heading'>
 						<span class='test-name'>Get Women Product List from Women Categories.</span>
-						<span class='test-time'>Oct 12, 2021 12:07:56 PM</span>
-						<span class='test-status right fail'>fail</span>
+						<span class='test-time'>Oct 12, 2021 01:22:04 PM</span>
+						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
 <div class="sr-filters bdd-filters">
@@ -337,66 +334,46 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='47' status='fail'>
-	<span class='duration right label'>0h 0m 9s+552ms</span>
+<div class='scenario node' test-id='47' status='pass'>
+	<span class='duration right label'>0h 0m 14s+207ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: User should be on Women category Page.</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: User should be on Women category Page.</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='50' class='node given pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_has_already_logged_in_to_an_application(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has already logged in to an application</div>
 			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>tyitproject2019@gmail.com</td><td>Selenium@12345</td></tr></table></div>
 		</li>
-		<li test-id='51' class='node then fail' status='fail'>
-			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then user is on women category page</div>
-			<textarea disabled class="code-block">java.lang.NullPointerException
-	at com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page(GETWomenProductsListSteps.java:27)
-	at ✽.user is on women category page(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/WomenProductList.feature:8)
-</textarea>
+		<li test-id='51' class='node then pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user is on women category page</div>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='52' class='node when skip' status='skip'>
-			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>When user gets title of the page</div>
-			<div class="node-step">Step skipped</div>
+		<li test-id='52' class='node when pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user gets title of the page</div>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='53' class='node then skip' status='skip'>
-			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then page title should be "Women - My Store"</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='54' class='node * pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>com.aniket.cucumberTesting.appHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</div>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="../embedded1.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
+		<li test-id='53' class='node then pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then page title should be "Women - My Store"</div>
 			<div class="node-step"></div>
 		</li>
 	</ul>
 </div>
-<div class='scenario node' test-id='56' status='fail'>
-	<span class='duration right label'>0h 0m 10s+478ms</span>
+<div class='scenario node' test-id='56' status='pass'>
+	<span class='duration right label'>0h 0m 13s+576ms</span>
 	<div class="bdd-test">
-		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: User can see list of women products.</div>
+		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: User can see list of women products.</div>
 	</div>
 	<ul class='steps'>
 		<li test-id='59' class='node given pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_has_already_logged_in_to_an_application(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user has already logged in to an application</div>
 			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>username</td><td>password</td></tr><tr><td>tyitproject2019@gmail.com</td><td>Selenium@12345</td></tr></table></div>
 		</li>
-		<li test-id='60' class='node then fail' status='fail'>
-			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>Then user is on women category page</div>
-			<textarea disabled class="code-block">java.lang.NullPointerException
-	at com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page(GETWomenProductsListSteps.java:27)
-	at ✽.user is on women category page(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/WomenProductList.feature:8)
-</textarea>
+		<li test-id='60' class='node then pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user is on women category page</div>
+			<div class="node-step"></div>
 		</li>
-		<li test-id='61' class='node then skip' status='skip'>
-			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_gets_list_of_women_products()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then user gets list of women products</div>
-			<div class="node-step">Step skipped</div>
-		</li>
-		<li test-id='62' class='node * pass' status='pass'>
-			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>com.aniket.cucumberTesting.appHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</div>
-			<ul class='screenshots right'>
-				<li><a data-featherlight="image" href="../embedded2.png"><i class='material-icons'>panorama</i></a></li>
-			</ul>
+		<li test-id='61' class='node then pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_gets_list_of_women_products()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user gets list of women products</div>
 			<div class="node-step"></div>
 		</li>
 	</ul>
@@ -423,75 +400,7 @@
 	</div>
 	<!-- subview right -->
 </div>
-<!-- test view --><!-- category view --><div id='exception-view' class='view hide'>
-	<section id='controls'>
-		<div class='controls grey lighten-4'>
-			<!-- search -->
-			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
-				<a href="#" class='search-div'>
-				<i class='material-icons'>search</i> Search
-				</a>
-				<div class='input-field left hide'>
-					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
-				</div>
-			</div>
-			<!-- search -->
-		</div>
-	</section>
-	<div class='subview-left left'>
-		<div class='view-summary'>
-			<ul id='exception-collection' class='exception-collection'>
-				<li class='exception displayed active'>
-					<div class='exception-heading'>
-						<span class='exception-name'>java.lang.NullPointerException</span>
-						<span class='exception-count right'><span class='label red lighten-1 white-text'>2</span></span>
-					</div>
-					<div class='exception-content hide'>
-						<div class='exception-tests'>
-							<table class='bordered table-results'>
-								<thead>
-									<tr>
-										<th>Timestamp</th>
-										<th>TestName</th>
-										<th>Status</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>Oct 12, 2021 12:08:04 PM</td>
-										<td class='linked' test-id='51'>Then user is on women category page</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.NullPointerException
-	at com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page(GETWomenProductsListSteps.java:27)
-	at ✽.user is on women category page(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/WomenProductList.feature:8)
-</textarea>
-										</td>
-									</tr>
-									<tr>
-										<td>Oct 12, 2021 12:08:21 PM</td>
-										<td class='linked' test-id='60'>Then user is on women category page</td>
-										<td>
-											<textarea disabled class="code-block">java.lang.NullPointerException
-	at com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page(GETWomenProductsListSteps.java:27)
-	at ✽.user is on women category page(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/WomenProductList.feature:8)
-</textarea>
-										</td>
-									</tr>
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-	<div class='subview-right left'>
-		<div class='view-summary'>
-			<h5 class='exception-name'></h5>
-		</div>
-	</div>
-</div>
-<!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- test view --><!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -511,25 +420,25 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>32</div>
+					<div class='panel-lead'>30</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Oct 12, 2021 12:06:07 PM</div>
+					<div class='panel-lead'>Oct 12, 2021 01:20:27 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Oct 12, 2021 12:08:22 PM</div>
+			 		<div class='panel-lead'>Oct 12, 2021 01:22:38 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 2m 14s+643ms</div>
+					<div class='panel-lead'>0h 2m 10s+926ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -569,38 +478,38 @@
 		<script>
 			var statusGroup = {
                 parentCount: 3,
-				passParent: 2,
-				failParent: 1,
+				passParent: 3,
+				failParent: 0,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 1,
+				exceptionsParent: 0,
 				childCount: 6,
-				passChild: 4,
-				failChild: 2,
+				passChild: 6,
+				failChild: 0,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 2,
-				grandChildCount: 32,
-				passGrandChild: 27,
-				failGrandChild: 2,
+				exceptionsChild: 0,
+				grandChildCount: 30,
+				passGrandChild: 30,
+				failGrandChild: 0,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 3,
+				skipGrandChild: 0,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 5,
+				exceptionsGrandChild: 0,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Account Page Feature":38.671,"Test Login Functionlity":26.773,"Get Women Product List from Women Categories.":25.21
+			        "Account Page Feature":30.442,"Test Login Functionlity":30.919,"Get Women Product List from Women Categories.":32.997
 			};
 		</script>
 	

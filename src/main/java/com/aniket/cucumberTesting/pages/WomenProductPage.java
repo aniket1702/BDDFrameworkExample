@@ -33,7 +33,7 @@ public class WomenProductPage {
 		for(WebElement webElements:womenProducts) {
 			
 			String listOfProducts=webElements.getText();
-			System.out.println("List of Women Products are: "+ listOfProducts);
+			System.out.println("List of Products are: "+ listOfProducts);
 			
 		}
 	}

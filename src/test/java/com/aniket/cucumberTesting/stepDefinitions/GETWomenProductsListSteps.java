@@ -12,9 +12,6 @@ public class GETWomenProductsListSteps {
 	//private LoginPage loginPage=new LoginPage(DriverFactory.getDriver());
 	private WomenProductPage womenProductPage=new WomenProductPage(DriverFactory.getDriver());
 	
-
-	
-	
 	
 	@Then("user is on women category page")
 	public void user_is_on_women_category_page() {
