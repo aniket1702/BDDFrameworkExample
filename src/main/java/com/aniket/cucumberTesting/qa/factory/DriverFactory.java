@@ -34,7 +34,7 @@ public  WebDriver driver;
 		
 	}
 	
-	public static synchronized WebDriver getDriver() {
+	public static  WebDriver getDriver() {
 		return tlDriver.get();
 	}
 }

@@ -119,15 +119,14 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0-M3</version>
+					<version>3.0.0-M1</version>
 					<configuration>
 						<includes>
-							<include>**/MyTestRunners.java</include>
+							<include>**/MyTestRunners.class</include>
 						</includes>
 						<parallel>methods</parallel>
-						<threadCount>4</threadCount>
-						<perCoreThreadCount>true</perCoreThreadCount>
-						<useUnlimitedThreads>false</useUnlimitedThreads>
+						<perCoreThreadCount>false</perCoreThreadCount>
+						<useUnlimitedThreads>true</useUnlimitedThreads>
 					</configuration>
 				</plugin>
 				<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 

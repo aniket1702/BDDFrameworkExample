@@ -21,7 +21,7 @@ import io.cucumber.java.Scenario;
 
 public class ApplicationHooks {
 	private DriverFactory driverFactory;
-	private WebDriver driver;
+	private static WebDriver driver;
 	private ConfigReader configReader;
 	Properties prop;
 

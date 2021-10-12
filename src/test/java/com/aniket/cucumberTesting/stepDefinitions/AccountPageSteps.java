@@ -1,7 +1,5 @@
 package com.aniket.cucumberTesting.stepDefinitions;
 
-import static org.testng.Assert.assertTrue;
-
 import java.util.List;
 import java.util.Map;
 

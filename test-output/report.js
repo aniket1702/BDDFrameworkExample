@@ -343,4 +343,136 @@ formatter.after({
 formatter.after({
   "status": "passed"
 });
+formatter.uri("file:src/test/resources/appFeatures/WomenProductList.feature");
+formatter.feature({
+  "name": "Get Women Product List from Women Categories.",
+  "description": "",
+  "keyword": "Feature"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user has already logged in to an application",
+  "rows": [
+    {},
+    {}
+  ],
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_has_already_logged_in_to_an_application(io.cucumber.datatable.DataTable)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on women category page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page()"
+});
+formatter.result({
+  "error_message": "java.lang.NullPointerException\r\n\tat com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page(GETWomenProductsListSteps.java:27)\r\n\tat ✽.user is on women category page(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/WomenProductList.feature:8)\r\n",
+  "status": "failed"
+});
+formatter.scenario({
+  "name": "User should be on Women category Page.",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "user gets title of the page",
+  "keyword": "When "
+});
+formatter.match({
+  "location": "com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.user_gets_title_of_the_page()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.step({
+  "name": "page title should be \"Women - My Store\"",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.aniket.cucumberTesting.stepDefinitions.LoginPageSteps.page_title_should_be(java.lang.String)"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded0.png", "User_should_be_on_Women_category_Page.");
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
+formatter.background({
+  "name": "",
+  "description": "",
+  "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.before({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user has already logged in to an application",
+  "rows": [
+    {},
+    {}
+  ],
+  "keyword": "Given "
+});
+formatter.match({
+  "location": "com.aniket.cucumberTesting.stepDefinitions.AccountPageSteps.user_has_already_logged_in_to_an_application(io.cucumber.datatable.DataTable)"
+});
+formatter.result({
+  "status": "passed"
+});
+formatter.step({
+  "name": "user is on women category page",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page()"
+});
+formatter.result({
+  "error_message": "java.lang.NullPointerException\r\n\tat com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_is_on_women_category_page(GETWomenProductsListSteps.java:27)\r\n\tat ✽.user is on women category page(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/WomenProductList.feature:8)\r\n",
+  "status": "failed"
+});
+formatter.scenario({
+  "name": "User can see list of women products.",
+  "description": "",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "name": "user gets list of women products",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "com.aniket.cucumberTesting.stepDefinitions.GETWomenProductsListSteps.user_gets_list_of_women_products()"
+});
+formatter.result({
+  "status": "skipped"
+});
+formatter.embedding("image/png", "embedded1.png", "User_can_see_list_of_women_products.");
+formatter.after({
+  "status": "passed"
+});
+formatter.after({
+  "status": "passed"
+});
 });
