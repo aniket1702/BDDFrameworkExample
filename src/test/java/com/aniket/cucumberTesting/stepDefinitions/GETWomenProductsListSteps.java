@@ -1,15 +1,9 @@
 package com.aniket.cucumberTesting.stepDefinitions;
 
-import java.util.List;
-import java.util.Map;
-
-import com.aniket.cucumberTesting.pages.AccountPage;
-import com.aniket.cucumberTesting.pages.LoginPage;
 import com.aniket.cucumberTesting.pages.WomenProductPage;
 import com.aniket.cucumberTesting.qa.factory.DriverFactory;
 
-import io.cucumber.datatable.DataTable;
-import io.cucumber.java.en.Given;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
