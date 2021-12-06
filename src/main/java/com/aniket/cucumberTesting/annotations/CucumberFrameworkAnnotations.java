@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.aniket.cucumbetTesting.annotations;
+package com.aniket.cucumberTesting.annotations;
 
 import static java.lang.annotation.ElementType.METHOD;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;

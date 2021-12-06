@@ -6,4 +6,4 @@
  * @author ANIKET
  * @version 1.0
  */
-package com.aniket.cucumbetTesting.reports;
+package com.aniket.cucumberTesting.reports;

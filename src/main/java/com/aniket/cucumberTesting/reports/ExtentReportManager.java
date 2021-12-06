@@ -2,7 +2,7 @@
  * 
  */
 
-package com.aniket.cucumbetTesting.reports;
+package com.aniket.cucumberTesting.reports;
 
 import java.util.Objects;
 

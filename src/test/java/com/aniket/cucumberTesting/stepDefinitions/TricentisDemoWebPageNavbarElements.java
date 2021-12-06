@@ -7,9 +7,9 @@ import java.util.List;
 
 import org.junit.Assert;
 
+import com.aniket.cucumberTesting.annotations.CucumberFrameworkAnnotations;
 import com.aniket.cucumberTesting.enums.CategoryTypes;
 import com.aniket.cucumberTesting.pages.TricentisDemoWebPageNavbarListPage;
-import com.aniket.cucumbetTesting.annotations.CucumberFrameworkAnnotations;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
