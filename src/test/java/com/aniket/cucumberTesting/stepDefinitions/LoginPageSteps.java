@@ -2,8 +2,8 @@ package com.aniket.cucumberTesting.stepDefinitions;
 
 import org.testng.Assert;
 
+import com.aniket.cucumberTesting.driver.DriverManager;
 import com.aniket.cucumberTesting.pages.LoginPage;
-import com.aniket.cucumberTesting.qa.factory.DriverFactory;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -13,11 +13,11 @@ import io.cucumber.java.en.When;
 public class LoginPageSteps {
 	
 	public static String title;
-	private LoginPage loginPage = new LoginPage(DriverFactory.getDriver());
+	private LoginPage loginPage=new LoginPage();
 	
 	@Given("user is on Home Page")
 	public void user_is_on_Home_Page() {
-		DriverFactory.getDriver().get("http://automationpractice.com/index.php");
+		DriverManager.getDriver().get("http://automationpractice.com/index.php");
 	}
 
 	@When("user gets title of the page")

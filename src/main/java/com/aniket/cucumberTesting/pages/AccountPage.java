@@ -1,40 +1,32 @@
 package com.aniket.cucumberTesting.pages;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class AccountPage {
+import com.aniket.cucumberTesting.enums.WaitStrategy;
+
+public class AccountPage extends BasePage{
 	
-	private  WebDriver driver;
 	private By get_sectionList=By.xpath("//body/div[@id='page']/div[2]/div[1]/div[3]/div[1]/div[1]//ul/li");
 	
-	
-	public AccountPage(WebDriver driver) {
-		this.driver=driver;
-	}
+	/*
+	 * public AccountPage(WebDriver driver) { this.driver=driver; }
+	 */
 	
 	
 	public String getAccountsPageTitle() {
-		return driver.getTitle();
+		//return driver.getTitle();
+		return getPageTitle();
 	}
 	
 	public List<String> getAccountSectionList() {
-		List<String> accountList=new ArrayList<>();
-		List<WebElement> accountHeaderList=driver.findElements(get_sectionList);
-		
-		for(WebElement e:accountHeaderList) {
-			String accList=e.getText();
-			System.out.println(" "+accList);
-			accountList.add(accList);
-		}
-		return accountList;
+		List<String>  accountSectionList=sendListKeys(get_sectionList, WaitStrategy.PRESENCE, "Account Section list");;
+		return accountSectionList;
+	
 	}
 
-	public int getCount() {
-		return driver.findElements(get_sectionList).size();
+	public int getAccountSectionCount() {
+		return getCount(WaitStrategy.NONE, get_sectionList);
 	}
 }

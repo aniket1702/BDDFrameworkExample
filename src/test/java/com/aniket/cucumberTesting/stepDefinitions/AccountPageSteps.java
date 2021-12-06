@@ -5,9 +5,9 @@ import java.util.Map;
 
 import org.junit.Assert;
 
+import com.aniket.cucumberTesting.driver.DriverManager;
 import com.aniket.cucumberTesting.pages.AccountPage;
 import com.aniket.cucumberTesting.pages.LoginPage;
-import com.aniket.cucumberTesting.qa.factory.DriverFactory;
 
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.Given;
@@ -16,7 +16,7 @@ import io.cucumber.java.en.Then;
 public class AccountPageSteps {
 	
 	
-	private LoginPage loginPage=new LoginPage(DriverFactory.getDriver());
+	private LoginPage loginPage=new LoginPage();
 	private AccountPage accountPage;
 	
 	@Given("user has already logged in to an application")
@@ -25,8 +25,8 @@ public class AccountPageSteps {
 	   String username=cred.get(0).get("username");
 	   String password=cred.get(0).get("password");
 	   
-	   DriverFactory.getDriver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
-	   accountPage=loginPage.doLogin(username, password);
+	  DriverManager.getDriver().get("http://automationpractice.com/index.php?controller=authentication&back=my-account");
+	   accountPage=loginPage.click_Login_Button();
 	   
 	}
 
@@ -50,7 +50,7 @@ public class AccountPageSteps {
 
 	@Then("accounts section count should be {int}")
 	public void accounts_section_count_should_be(Integer expectedCount) {
-	   Assert.assertTrue(accountPage.getCount()==expectedCount);
+	   Assert.assertTrue(accountPage.getAccountSectionCount()==expectedCount);
 	}
 
 }

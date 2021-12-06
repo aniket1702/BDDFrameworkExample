@@ -1,5 +1,6 @@
 package com.aniket.cucumberTesting.stepDefinitions;
 
+import com.aniket.cucumberTesting.driver.DriverManager;
 import com.aniket.cucumberTesting.pages.WomenProductPage;
 import com.aniket.cucumberTesting.qa.factory.DriverFactory;
 
@@ -10,7 +11,7 @@ import io.cucumber.java.en.When;
 public class GETWomenProductsListSteps {
 	
 	//private LoginPage loginPage=new LoginPage(DriverFactory.getDriver());
-	private WomenProductPage womenProductPage=new WomenProductPage(DriverFactory.getDriver());
+	private WomenProductPage womenProductPage=new WomenProductPage(DriverManager.getDriver());
 	
 	
 	@Then("user is on women category page")

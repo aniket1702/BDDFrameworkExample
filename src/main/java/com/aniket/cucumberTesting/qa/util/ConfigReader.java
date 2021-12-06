@@ -3,26 +3,50 @@ package com.aniket.cucumberTesting.qa.util;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
 import java.util.Properties;
 
-public class ConfigReader {
+import com.aniket.cucumberTesting.enums.ConfigProperties;
+import com.aniket.cucumberTesting.frameworkconstant.FrameworkConstant;
+
+
+public final class ConfigReader {
 	
-	private Properties prop;
+	private ConfigReader() {}
 	
-	public Properties initProp() {
-		prop=new Properties();
-		try {
-			FileInputStream fp=new FileInputStream("src/test/resources/config/config.properties");
-			prop.load(fp);
-		}
-		catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+	private static Properties properties = new Properties();
+	private static final Map<String, String> CONFIGMAP = new HashMap<>();
+
+	static {
+
+		try (FileInputStream fis = new FileInputStream(FrameworkConstant.getConfigFilePath())) {
+
+			properties.load(fis);
+
+			for (Map.Entry<Object, Object> entry : properties.entrySet()) {
+				CONFIGMAP.put(String.valueOf(entry.getKey()), String.valueOf(entry.getValue()).trim());
+			}
+
+		} catch (FileNotFoundException ex) {
+
+			ex.printStackTrace();
+			System.exit(0);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+
 			e.printStackTrace();
+			System.exit(0);
 		}
-		return prop;
 	}
+
+	public static String get(ConfigProperties key) throws Exception {
+
+		if (Objects.isNull(key) || Objects.isNull(CONFIGMAP.get(key.name().toLowerCase()))) {
+			throw new Exception("Property name " + key + " is not found. Please check config file.");
+		}
+		return CONFIGMAP.get(key.name().toLowerCase());
+	}
+
 
 }

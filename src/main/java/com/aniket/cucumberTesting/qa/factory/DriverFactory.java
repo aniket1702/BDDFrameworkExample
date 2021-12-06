@@ -6,35 +6,25 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class DriverFactory {
+public final class DriverFactory {
 
-	
-public  WebDriver driver;
-	
-	public static ThreadLocal<WebDriver> tlDriver=new ThreadLocal<WebDriver>();
-	
-	public WebDriver initDriver(String browser) {
-		System.out.println("Selected Browser is: "+browser);
-		if(browser.equals("chrome")) {
+	private DriverFactory() {
+	}
+
+	static WebDriver driver = null;
+
+	public static WebDriver getDriver(String browser) {
+
+		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
-			tlDriver.set(new ChromeDriver());
-		}
-		else if(browser.equals("firefox")) {
+			driver = new ChromeDriver();
+		} else if (browser.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			tlDriver.set(new FirefoxDriver());
+			driver = new FirefoxDriver();
 		}
-		else {
-			
-			System.out.println("Please pass the correct browser value: " + browser);
-		}
-		
-		getDriver().manage().deleteAllCookies();
-		getDriver().manage().window().maximize();
-		return getDriver();
-		
+		return driver;
 	}
-	
-	public static  WebDriver getDriver() {
-		return tlDriver.get();
-	}
+
+
+
 }
