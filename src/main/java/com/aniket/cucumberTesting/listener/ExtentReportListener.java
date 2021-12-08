@@ -20,21 +20,24 @@ import com.aniket.cucumberTesting.reports.ExtentReport;
  */
 public class ExtentReportListener extends RunListener {
 
-	public void testRunStarted(Description description) throws java.lang.Exception {
+	@Override
+	public void testRunStarted(Description description) throws Exception {
 		ExtentReport.initReport();
 	}
 
 	/**
 	 * Called when all tests have finished
 	 */
-	public void testRunFinished(Result result) throws java.lang.Exception {
+	@Override
+	public void testRunFinished(Result result) throws Exception {
 		ExtentReport.flushReport();
 	}
 
 	/**
 	 * Called when an atomic test is about to be started.
 	 */
-	public void testStarted(Description description) throws java.lang.Exception {
+	@Override
+	public void testStarted(Description description) throws Exception {
 		ExtentReport.createTest(description.getMethodName());
 		ExtentReport.addAuthors(description.getAnnotation(CucumberFrameworkAnnotations.class).author());
 		ExtentReport.addCategories(description.getAnnotation(CucumberFrameworkAnnotations.class).category());
@@ -43,14 +46,15 @@ public class ExtentReportListener extends RunListener {
 	/**
 	 * Called when an atomic test has finished, whether the test succeeds or fails.
 	 */
-	public void testFinished(Description description) throws java.lang.Exception {
+	@Override
+	public void testFinished(Description description) throws Exception {
 		ExtentLogger.pass(description.getMethodName()+ " is Passed.");
 	}
 
 	/**
 	 * Called when an atomic test fails.
 	 */
-	public void testFailure(Failure failure) throws java.lang.Exception {
+	public void testFailure(Failure failure) throws Exception {
 		ExtentLogger.fail(failure.getDescription()+ "is Failed.", true);
 		ExtentLogger.fail(failure.getTrace().toString());
 	}
@@ -59,7 +63,7 @@ public class ExtentReportListener extends RunListener {
 	 * Called when a test will not be run, generally because a test method is
 	 * annotated with Ignore.
 	 */
-	public void testIgnored(Description description) throws java.lang.Exception {
+	public void testIgnored(Description description) throws Exception {
 		System.out.println("Execution of test case ignored : " + description.getMethodName());
 	}
 }
