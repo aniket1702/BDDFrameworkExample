@@ -5,11 +5,8 @@ package com.aniket.cucumberTesting.stepDefinitions;
 
 import org.junit.Assert;
 
-import com.aniket.cucumberTesting.driver.DriverManager;
-import com.aniket.cucumberTesting.enums.ConfigProperties;
 import com.aniket.cucumberTesting.pages.SuccessfullRegisterationDemoPage;
 import com.aniket.cucumberTesting.pages.TricentisDemoWebPageRegisterPage;
-import com.aniket.cucumberTesting.qa.util.ConfigReader;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -22,6 +19,9 @@ import io.cucumber.java.en.When;
  * @author ANIKET
  * @version 1.0
  */
+
+
+
 public class TricentisDemoWebPageRegisterationSteps {
 
 	 TricentisDemoWebPageRegisterPage tricentisDemoWebPageRegisterPage=new TricentisDemoWebPageRegisterPage();
@@ -35,12 +35,12 @@ public class TricentisDemoWebPageRegisterationSteps {
 
 	@When("user enters URL of the page")
 	public void user_enters_URL_of_the_page() {
-		try {
-			DriverManager.getDriver().get(ConfigReader.get(ConfigProperties.URL));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		System.out.println("Entering URL");
+		/*
+		 * try { DriverManager.getDriver().get(ConfigReader.get(ConfigProperties.URL));
+		 * } catch (Exception e) { // TODO Auto-generated catch block
+		 * e.printStackTrace(); }
+		 */
 	}
 
 	@Then("user gets the title of the page")
@@ -50,7 +50,8 @@ public class TricentisDemoWebPageRegisterationSteps {
 
 	@And("title of the page should be {string}")
 	public void title_of_the_page_should_be(String expectedtitle) {
-		Assert.assertTrue(expectedtitle.equals(actualTitle));
+		Assert.assertEquals(expectedtitle,actualTitle);
+		//ExtentLogger.pass(expectedtitle, true);
 		
 	}
 

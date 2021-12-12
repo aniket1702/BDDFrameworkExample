@@ -48,6 +48,7 @@
 		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
 			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
 						<li class='waves-effect'><a href='#!' view='category-view' onclick="configureView(1)"><i class='material-icons'>label_outline</i></a></li>
+			<li class='waves-effect'><a href='#!' view='exception-view' onclick="configureView(2)"><i class='material-icons'>bug_report</i></a></li>
 			<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></a></li>
 		</ul>
 		<!-- report name -->
@@ -57,7 +58,7 @@
 		<!-- nav-right -->
 		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
 			<a href='#!'>
-			<span class='label blue darken-3 suite-start-time'>Dec 6, 2021 12:24:08 PM</span>
+			<span class='label blue darken-3 suite-start-time'>Dec 12, 2021 04:57:25 PM</span>
 			</a>
 		</ul>
 	</div>
@@ -73,6 +74,8 @@
 				</a>
 				<ul id='tests-toggle' class='dropdown-content'>
 										<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+					<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li status='skip'><a href='#!'>Skip <i class='material-icons cyan-text'>redo</i></a></li>
 					<li class='divider'></li>
 					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
 				</ul>
@@ -84,7 +87,7 @@
 				<i class='material-icons'>local_offer</i> Category
 				</a>
 				<ul id='category-toggle' class='dropdown-content'>
-					<li><a href='#'>@NavbarElementTest</a></li>
+					<li><a href='#'>@UnitTest</a></li>
 					<li><a href='#'>@Test1</a></li>
 					<li class='divider'></li>
 					<li class='clear'><a href='#!' clear='true'>Clear Filters</a></li>
@@ -126,10 +129,10 @@
                     <canvas id='parent-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> feature(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> feature(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> feature(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped
                 </div>
             </div>
         </div>
@@ -140,10 +143,10 @@
                     <canvas id='child-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>1</span> scenario(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='50%'><span class='strong'>1</span> scenario(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='50%'>1</span> scenario(s) failed, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
                     <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
                 </div>
@@ -156,12 +159,12 @@
                     <canvas id='grandchild-analysis' width='90' height='70'></canvas>
                 </div>
                 <div class='block text-small'>
-                    <span class='tooltipped' data-position='top' data-tooltip='100%'><span class='strong'>7</span> step(s) passed</span>
+                    <span class='tooltipped' data-position='top' data-tooltip='81.25%'><span class='strong'>13</span> step(s) passed</span>
                 </div>
                 <div class='block text-small'>
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> scenario(s) failed, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> skipped, 
-                    <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+                    <span class='strong tooltipped' data-position='top' data-tooltip='6.25%'>1</span> scenario(s) failed, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='12.5%'>2</span> skipped, 
+                    <span class='strong tooltipped' data-position='top' data-tooltip='12.5%'>0</span> others
                 </div>
             </div>
         </div>
@@ -179,10 +182,82 @@
 </div>	<div class='subview-left left'>
 		<div class='view-summary'>
 			<ul id='test-collection' class='test-collection'>
-				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='1'>
+				<li class='test displayed active has-leaf fail' status='fail' bdd='true' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>Verify Tricentis Demo Web Shop Register Page Feature.</span>
+						<span class='test-time'>Dec 12, 2021 04:57:38 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class="sr-filters bdd-filters">
+	<a class="btn-floating waves-effect waves-light pass green" title="pass"><i class='material-icons'>check_circle</i></a>
+	<a class="btn-floating waves-effect waves-light fail red" title="fail"><i class='material-icons'>cancel</i></a>
+	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
+	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
+</div>
+<div class='scenario node' test-id='2' status='fail'>
+	<div class='category-list'>
+		<span class='category label'>@UnitTest</span>
+		<span class='category label'>@Test1</span>
+	</div>
+	<span class='duration right label'>0h 0m 4s+925ms</span>
+	<div class="bdd-test">
+		<div class="scenario-name"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span> Scenario: User should be able to click on register link and should redirects to Registration Page.</div>
+	</div>
+	<ul class='steps'>
+		<li test-id='7' class='node given pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_is_on_Home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Home page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='8' class='node when pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_enters_URL_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters URL of the page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='9' class='node then pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_gets_the_title_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user gets the title of the page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='10' class='node and pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.title_of_the_page_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And title of the page should be "Demo Web Shop"</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='11' class='node given pass' status='pass'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_is_on_Registeration_Page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Registeration Page</div>
+			<div class="node-step"></div>
+		</li>
+		<li test-id='12' class='node when fail' status='fail'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_clicks_on_register_link()"><span class='status fail' title='fail'><i class='material-icons'>cancel</i></span>When user clicks on register link</div>
+			<textarea disabled class="code-block">java.lang.NullPointerException
+	at com.aniket.cucumberTesting.reports.ExtentLogger.pass(ExtentLogger.java:26)
+	at com.aniket.cucumberTesting.pages.BasePage.clickButton(BasePage.java:35)
+	at com.aniket.cucumberTesting.pages.TricentisDemoWebPageRegisterPage.clickRegisterLink(TricentisDemoWebPageRegisterPage.java:35)
+	at com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_clicks_on_register_link(TricentisDemoWebPageRegisterationSteps.java:65)
+	at ?.user clicks on register link(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/tricentis_register_page_feature.feature:13)
+</textarea>
+		</li>
+		<li test-id='22' class='node then skip' status='skip'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_gets_the_title_of_the_page()"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>Then user gets the title of the page</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='24' class='node and skip' status='skip'>
+			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.title_of_the_page_should_be(java.lang.String)"><span class='status skip' title='skip'><i class='material-icons'>redo</i></span>And title of the page should be "Demo Web Shop. Register"</div>
+			<div class="node-step">Step skipped</div>
+		</li>
+		<li test-id='26' class='node * pass' status='pass'>
+			<div class="step-name" title=""><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>com.aniket.cucumberTesting.appHooks.ApplicationHooks.tearDown(io.cucumber.java.Scenario)</div>
+			<ul class='screenshots right'>
+				<li><a data-featherlight="image" href="../embedded1.png"><i class='material-icons'>panorama</i></a></li>
+			</ul>
+			<div class="node-step"></div>
+		</li>
+	</ul>
+</div>
+					</div>
+				</li>
+				<li class='test displayed active has-leaf pass' status='pass' bdd='true' test-id='3'>
 					<div class='test-heading'>
 						<span class='test-name'>Get NAVBAR Elements.</span>
-						<span class='test-time'>Dec 6, 2021 12:24:53 PM</span>
+						<span class='test-time'>Dec 12, 2021 04:57:38 PM</span>
 						<span class='test-status right pass'>pass</span>
 					</div>
 					<div class='test-content hide'>
@@ -192,41 +267,41 @@
 	<a class="btn-floating waves-effect waves-light skip blue" title="skip"><i class='material-icons'>redo</i></a>
 	<a class="btn-floating waves-effect waves-light clear grey" title="clear"><i class='material-icons'>clear</i></a>
 </div>
-<div class='scenario node' test-id='2' status='pass'>
+<div class='scenario node' test-id='4' status='pass'>
 	<div class='category-list'>
-		<span class='category label'>@NavbarElementTest</span>
+		<span class='category label'>@UnitTest</span>
 		<span class='category label'>@Test1</span>
 	</div>
-	<span class='duration right label'>0h 0m 1s+802ms</span>
+	<span class='duration right label'>0h 0m 0s+292ms</span>
 	<div class="bdd-test">
 		<div class="scenario-name"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span> Scenario: Verify List of Navbar elements are present on Home Page.</div>
 	</div>
 	<ul class='steps'>
-		<li test-id='4' class='node given pass' status='pass'>
+		<li test-id='13' class='node given pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_is_on_Home_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given user is on Home page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='5' class='node when pass' status='pass'>
+		<li test-id='14' class='node when pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_enters_URL_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user enters URL of the page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='6' class='node then pass' status='pass'>
+		<li test-id='15' class='node then pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_gets_the_title_of_the_page()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then user gets the title of the page</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='7' class='node and pass' status='pass'>
+		<li test-id='16' class='node and pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.title_of_the_page_should_be(java.lang.String)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>And title of the page should be "Demo Web Shop"</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='8' class='node given pass' status='pass'>
+		<li test-id='17' class='node given pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageNavbarElements.navbar_element_is_present()"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Given Navbar element is present</div>
 			<div class="node-step"></div>
 		</li>
-		<li test-id='9' class='node when pass' status='pass'>
+		<li test-id='18' class='node when pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageNavbarElements.user_gets_Navbar_section(io.cucumber.datatable.DataTable)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>When user gets Navbar section</div>
 			<div class="node-step"><table class='runtime-table table-striped table'><tr><td>BOOKS</td></tr><tr><td>COMPUTERS</td></tr><tr><td>ELECTRONICS</td></tr><tr><td>APPAREL & SHOES</td></tr><tr><td>DIGITAL DOWNLOADS</td></tr><tr><td>JEWELRY</td></tr><tr><td>GIFT CARDS</td></tr></table></div>
 		</li>
-		<li test-id='10' class='node then pass' status='pass'>
+		<li test-id='19' class='node then pass' status='pass'>
 			<div class="step-name" title="com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageNavbarElements.counts_of_Navbar_elements_should_be(java.lang.Integer)"><span class='status pass' title='pass'><i class='material-icons'>check_circle</i></span>Then counts of Navbar elements should be 7</div>
 			<div class="node-step"></div>
 		</li>
@@ -274,15 +349,16 @@
 			<ul id='category-collection' class='category-collection'>
 				<li class='category displayed active'>
 					<div class='category-heading'>
-						<span class='category-name'>@NavbarElementTest</span>
+						<span class='category-name'>@UnitTest</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
 							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -296,13 +372,23 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 6, 2021 12:24:53 PM</td>
-										<td class='linked' test-id='1'>Get NAVBAR Elements.</td>
+										<td>Dec 12, 2021 04:57:38 PM</td>
+										<td class='linked' test-id='1'>Verify Tricentis Demo Web Shop Register Page Feature.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 12, 2021 04:57:38 PM</td>
+										<td class='linked' test-id='2'>User should be able to click on register link and should redirects to Registration Page.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 12, 2021 04:57:38 PM</td>
+										<td class='linked' test-id='3'>Get NAVBAR Elements.</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 									<tr>
-										<td>Dec 6, 2021 12:24:53 PM</td>
-										<td class='linked' test-id='2'>Verify List of Navbar elements are present on Home Page.</td>
+										<td>Dec 12, 2021 04:57:38 PM</td>
+										<td class='linked' test-id='4'>Verify List of Navbar elements are present on Home Page.</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -315,12 +401,13 @@
 						<span class='category-name'>@Test1</span>
 						<span class='category-status right'>
 						<span class='label pass'>1</span>
+						<span class='label fail'>1</span>
 						</span>
 					</div>
 					<div class='category-content hide'>
 						<div class='category-status-counts'>
 							<span status="pass" class='label green accent-4 white-text'>Passed: 1</span>
-							
+							<span status="fail" class='label red lighten-1 white-text'>Failed: 1</span>
 							
 						</div>
 						<div class='category-tests'>
@@ -334,8 +421,13 @@
 								</thead>
 								<tbody>
 									<tr>
-										<td>Dec 6, 2021 12:24:53 PM</td>
-										<td class='linked' test-id='2'>Verify List of Navbar elements are present on Home Page.</td>
+										<td>Dec 12, 2021 04:57:38 PM</td>
+										<td class='linked' test-id='2'>User should be able to click on register link and should redirects to Registration Page.</td>
+										<td><span class='test-status fail'>fail</span></td>
+									</tr>
+									<tr>
+										<td>Dec 12, 2021 04:57:38 PM</td>
+										<td class='linked' test-id='4'>Verify List of Navbar elements are present on Home Page.</td>
 										<td><span class='test-status pass'>pass</span></td>
 									</tr>
 								</tbody>
@@ -352,7 +444,68 @@
 		</div>
 	</div>
 </div>
-<!-- category view --><!-- exception view --><div id='dashboard-view' class='view hide'>
+<!-- category view --><div id='exception-view' class='view hide'>
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+				<i class='material-icons'>search</i> Search
+				</a>
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+	<div class='subview-left left'>
+		<div class='view-summary'>
+			<ul id='exception-collection' class='exception-collection'>
+				<li class='exception displayed active'>
+					<div class='exception-heading'>
+						<span class='exception-name'>java.lang.NullPointerException</span>
+						<span class='exception-count right'><span class='label red lighten-1 white-text'>1</span></span>
+					</div>
+					<div class='exception-content hide'>
+						<div class='exception-tests'>
+							<table class='bordered table-results'>
+								<thead>
+									<tr>
+										<th>Timestamp</th>
+										<th>TestName</th>
+										<th>Status</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>Dec 12, 2021 04:57:38 PM</td>
+										<td class='linked' test-id='12'>When user clicks on register link</td>
+										<td>
+											<textarea disabled class="code-block">java.lang.NullPointerException
+	at com.aniket.cucumberTesting.reports.ExtentLogger.pass(ExtentLogger.java:26)
+	at com.aniket.cucumberTesting.pages.BasePage.clickButton(BasePage.java:35)
+	at com.aniket.cucumberTesting.pages.TricentisDemoWebPageRegisterPage.clickRegisterLink(TricentisDemoWebPageRegisterPage.java:35)
+	at com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_clicks_on_register_link(TricentisDemoWebPageRegisterationSteps.java:65)
+	at ?.user clicks on register link(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/tricentis_register_page_feature.feature:13)
+</textarea>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='exception-name'></h5>
+		</div>
+	</div>
+</div>
+<!-- exception view --><div id='dashboard-view' class='view hide'>
 	<div class='card-panel transparent np-v'>
 		<h5>Dashboard</h5>
 
@@ -360,37 +513,37 @@
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Features
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Scenarios
-					<div class='panel-lead'>1</div>
+					<div class='panel-lead'>2</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Steps
-					<div class='panel-lead'>7</div>
+					<div class='panel-lead'>16</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Start
-					<div class='panel-lead'>Dec 6, 2021 12:24:08 PM</div>
+					<div class='panel-lead'>Dec 12, 2021 04:57:25 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 			 		End
-			 		<div class='panel-lead'>Dec 6, 2021 12:24:57 PM</div>
+			 		<div class='panel-lead'>Dec 12, 2021 04:57:52 PM</div>
 				</div>
 			</div>
 			<div class='col s2'>
 				<div class='card-panel r'>
 					Time Taken
-					<div class='panel-lead'>0h 0m 49s+43ms</div>
+					<div class='panel-lead'>0h 0m 26s+304ms</div>
 				</div>
 			</div>
 			<div class='col s4'>
@@ -434,21 +587,21 @@
 							<th>Passed %</th>
 						</tr>
 						<tr>
-							<td>@NavbarElementTest</td>
+							<td>@UnitTest</td>
+							<td>1</td>
 							<td>1</td>
 							<td>0</td>
-							<td>0</td>
 							<td>
-									50%
+									25%
 							</td>
 						</tr>
 						<tr>
 							<td>@Test1</td>
 							<td>1</td>
-							<td>0</td>
+							<td>1</td>
 							<td>0</td>
 							<td>
-									100%
+									50%
 							</td>
 						</tr>
 					</table>
@@ -462,39 +615,39 @@
 		<!-- container -->
 		<script>
 			var statusGroup = {
-                parentCount: 1,
+                parentCount: 2,
 				passParent: 1,
-				failParent: 0,
+				failParent: 1,
 				fatalParent: 0,
 				errorParent: 0,
 				warningParent: 0,
 				skipParent: 0,
-				exceptionsParent: 0,
-				childCount: 1,
+				exceptionsParent: 1,
+				childCount: 2,
 				passChild: 1,
-				failChild: 0,
+				failChild: 1,
 				fatalChild: 0,
 				errorChild: 0,
 				warningChild: 0,
 				skipChild: 0,
 				infoChild: 0,
 				debugChild: 0,
-				exceptionsChild: 0,
-				grandChildCount: 7,
-				passGrandChild: 7,
-				failGrandChild: 0,
+				exceptionsChild: 1,
+				grandChildCount: 16,
+				passGrandChild: 13,
+				failGrandChild: 1,
 				fatalGrandChild: 0,
 				errorGrandChild: 0,
 				warningGrandChild: 0,
-				skipGrandChild: 0,
+				skipGrandChild: 2,
 				infoGrandChild: 0,
 				debugGrandChild: 0,
-				exceptionsGrandChild: 0,
+				exceptionsGrandChild: 3,
 			};
 		</script>
 		<script>
 			var timeline = {
-			        "Get NAVBAR Elements.":1.802
+			        "Verify Tricentis Demo Web Shop Register Page Feature.":4.925,"Get NAVBAR Elements.":0.292
 			};
 		</script>
 	

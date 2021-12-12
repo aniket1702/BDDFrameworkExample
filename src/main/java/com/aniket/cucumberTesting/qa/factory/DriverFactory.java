@@ -11,10 +11,8 @@ public final class DriverFactory {
 	private DriverFactory() {
 	}
 
-	static WebDriver driver = null;
-
 	public static WebDriver getDriver(String browser) {
-
+		WebDriver driver = null;
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			driver = new ChromeDriver();
@@ -24,7 +22,5 @@ public final class DriverFactory {
 		}
 		return driver;
 	}
-
-
 
 }

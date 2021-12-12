@@ -39,7 +39,7 @@ public final class FrameworkConstant {
 
 	public static String getExtentReportFolderPath() throws Exception {
 	
-			if (ConfigReader.get(ConfigProperties.OVERRIDEREPORT).equalsIgnoreCase("no")) {
+			if (ConfigReader.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("no")) {
 				return EXTENTREPORTFOLDERPATH + System.currentTimeMillis() + "/SparkReport.html";
 			} else {
 				return EXTENTREPORTFOLDERPATH + "SparkReport.html";

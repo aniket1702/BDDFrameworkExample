@@ -1,4 +1,4 @@
-@NavbarElementTest
+@UnitTest
 Feature: Get NAVBAR Elements.
 
   Background: User should open the Demo Web Shop URL.

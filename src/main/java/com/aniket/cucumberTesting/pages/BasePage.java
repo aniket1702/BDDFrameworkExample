@@ -25,12 +25,13 @@ public class BasePage {
 		WebElement element = ExplicitWaitFactory.performExplicitStaticWait(waitStrategy, by);
 		element.sendKeys(value);
 		System.out.println(value + " is passed to parameter/Element. " + elementName);
+		//ExtentLogger.pass(value + " is passed to parameter/Element. " + elementName);
 	}
 
 	protected void clickButton(By by, WaitStrategy waitStrategy, String elementName) {
 		WebElement element = ExplicitWaitFactory.performExplicitStaticWait(waitStrategy, by);
 		element.click();
-
+		//ExtentLogger.pass(elementName+" is clicked");
 		System.out.println(elementName + " is Clicked.");
 	}
 
@@ -42,6 +43,7 @@ public class BasePage {
 		WebElement element = ExplicitWaitFactory.performExplicitStaticWait(waitStrategy, by);
 		element.getText();
 		System.out.println(elementName + " is Present.");
+		//ExtentLogger.pass(elementName + " is Present.");
 	}
 
 	/**

@@ -23,6 +23,7 @@ public class TricentisDemoWebPageNavbarListPage extends BasePage{
 	
 	public  void getNavList() {
 		getTextFromElement(navList, WaitStrategy.PRESENCE, "NavBar");
+		
 	}
 
 	

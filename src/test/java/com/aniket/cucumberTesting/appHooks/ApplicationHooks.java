@@ -1,11 +1,16 @@
 package com.aniket.cucumberTesting.appHooks;
 
+import java.awt.Desktop;
+import java.io.File;
+import java.io.IOException;
+
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
 import com.aniket.cucumberTesting.driver.Driver;
 import com.aniket.cucumberTesting.driver.DriverManager;
 import com.aniket.cucumberTesting.enums.ConfigProperties;
+import com.aniket.cucumberTesting.frameworkconstant.FrameworkConstant;
 import com.aniket.cucumberTesting.qa.util.ConfigReader;
 
 import io.cucumber.java.After;
@@ -41,4 +46,10 @@ public class ApplicationHooks {
 			scenario.attach(sourcePath, "image/png", screenshotname);
 		}
 	}
+
+	@After(order = 2)
+	public void getExtentReport() throws IOException, Exception {
+		Desktop.getDesktop().browse(new File(FrameworkConstant.getExtentReportFilePath()).toURI());
+	}
+
 }

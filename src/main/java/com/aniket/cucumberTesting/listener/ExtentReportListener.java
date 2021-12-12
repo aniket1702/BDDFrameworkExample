@@ -54,15 +54,17 @@ public class ExtentReportListener extends RunListener {
 	/**
 	 * Called when an atomic test fails.
 	 */
+	@Override
 	public void testFailure(Failure failure) throws Exception {
 		ExtentLogger.fail(failure.getDescription()+ "is Failed.", true);
-		ExtentLogger.fail(failure.getTrace().toString());
+		ExtentLogger.fail(failure.getTrace());
 	}
 
 	/**
 	 * Called when a test will not be run, generally because a test method is
 	 * annotated with Ignore.
 	 */
+	@Override
 	public void testIgnored(Description description) throws Exception {
 		System.out.println("Execution of test case ignored : " + description.getMethodName());
 	}
