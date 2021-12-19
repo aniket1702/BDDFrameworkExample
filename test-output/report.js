@@ -17,6 +17,9 @@ formatter.background({
 formatter.before({
   "status": "passed"
 });
+formatter.before({
+  "status": "passed"
+});
 formatter.step({
   "name": "user is on Home page",
   "keyword": "Given "
@@ -115,9 +118,6 @@ formatter.after({
 formatter.after({
   "status": "passed"
 });
-formatter.after({
-  "status": "passed"
-});
 formatter.uri("file:src/test/resources/appFeatures/tricentis_register_page_feature.feature");
 formatter.feature({
   "name": "Verify Tricentis Demo Web Shop Register Page Feature.",
@@ -125,7 +125,7 @@ formatter.feature({
   "keyword": "Feature",
   "tags": [
     {
-      "name": "@UnitTest"
+      "name": "@SmokeTest"
     }
   ]
 });
@@ -133,6 +133,9 @@ formatter.background({
   "name": "User should open the Demo Web Shop URL.",
   "description": "",
   "keyword": "Background"
+});
+formatter.before({
+  "status": "passed"
 });
 formatter.before({
   "status": "passed"
@@ -183,10 +186,10 @@ formatter.scenario({
   "keyword": "Scenario",
   "tags": [
     {
-      "name": "@UnitTest"
+      "name": "@SmokeTest"
     },
     {
-      "name": "@Test1"
+      "name": "@Test2"
     }
   ]
 });
@@ -208,8 +211,7 @@ formatter.match({
   "location": "com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_clicks_on_register_link()"
 });
 formatter.result({
-  "error_message": "java.lang.NullPointerException\r\n\tat com.aniket.cucumberTesting.reports.ExtentLogger.pass(ExtentLogger.java:26)\r\n\tat com.aniket.cucumberTesting.pages.BasePage.clickButton(BasePage.java:35)\r\n\tat com.aniket.cucumberTesting.pages.TricentisDemoWebPageRegisterPage.clickRegisterLink(TricentisDemoWebPageRegisterPage.java:35)\r\n\tat com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_clicks_on_register_link(TricentisDemoWebPageRegisterationSteps.java:65)\r\n\tat ✽.user clicks on register link(file:///D:/JavaProjects/cucumberTesting/src/test/resources/appFeatures/tricentis_register_page_feature.feature:13)\r\n",
-  "status": "failed"
+  "status": "passed"
 });
 formatter.step({
   "name": "user gets the title of the page",
@@ -219,7 +221,7 @@ formatter.match({
   "location": "com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.user_gets_the_title_of_the_page()"
 });
 formatter.result({
-  "status": "skipped"
+  "status": "passed"
 });
 formatter.step({
   "name": "title of the page should be \"Demo Web Shop. Register\"",
@@ -229,12 +231,8 @@ formatter.match({
   "location": "com.aniket.cucumberTesting.stepDefinitions.TricentisDemoWebPageRegisterationSteps.title_of_the_page_should_be(java.lang.String)"
 });
 formatter.result({
-  "status": "skipped"
-});
-formatter.after({
   "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "User_should_be_able_to_click_on_register_link_and_should_redirects_to_Registration_Page.");
 formatter.after({
   "status": "passed"
 });

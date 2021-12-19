@@ -1,4 +1,4 @@
-@UnitTest
+@SmokeTest
 Feature: Verify Tricentis Demo Web Shop Register Page Feature.
 
   Background: User should open the Demo Web Shop URL.
@@ -7,7 +7,7 @@ Feature: Verify Tricentis Demo Web Shop Register Page Feature.
      Then user gets the title of the page
       And title of the page should be "Demo Web Shop"
 
-  @Test1
+  @Test2
   Scenario: User should be able to click on register link and should redirects to Registration Page.
     Given user is on Registeration Page
      When user clicks on register link

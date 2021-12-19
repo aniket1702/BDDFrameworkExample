@@ -49,6 +49,7 @@ public final class ExplicitWaitFactory {
 	}
 	
 
+
 	@SuppressWarnings("unchecked")
 	public static List<WebElement> performExplicitStaticWaitOnListOfElements(WaitStrategy waitStrategy, By by) {
 		List<WebElement> elements=null;

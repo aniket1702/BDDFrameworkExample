@@ -29,7 +29,7 @@
 			<groupId>io.cucumber</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>${cucumber.version}</version>
-			<scope>test</scope>
+		
 
 		</dependency>
 
@@ -111,18 +111,16 @@
 				<version>3.0.0-M3</version>
 				<configuration>
 
-					<properties>
+				<!-- 	<properties>
 						<property>
 							<name>ExtentReportListener</name>
 							<value>com.aniket.cucumberTesting.listener</value>
 						</property>
-					</properties>
+					</properties> -->
 					<includes>
 						<include>**/MyTestRunners.class</include>
 					</includes>
 					<parallelMavenExecution>true</parallelMavenExecution>
-
-
 					<parallel>methods</parallel>
 					<threadCount>10</threadCount>
 					<perCoreThreadCount>false</perCoreThreadCount>

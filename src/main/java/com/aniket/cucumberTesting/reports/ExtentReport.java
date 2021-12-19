@@ -22,6 +22,8 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
  * @author ANIKET
  * @version 1.0
  */
+
+
 public final class ExtentReport {
 
 	private ExtentReport() {
@@ -29,21 +31,33 @@ public final class ExtentReport {
 
 	private static ExtentReports extent;
 
+
 	public static void initReport() throws Exception {
 		if (Objects.isNull(extent)) {
 			extent = new ExtentReports();
 			ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstant.getExtentReportFilePath());
+			
+			/*
+			 * final File CONF=new File(FrameworkConstant.getExtentConfigFilePath());
+			 * spark.loadXMLConfig(CONF);
+			 */
+			
 			extent.attachReporter(spark);
-			spark.config().setTheme(Theme.STANDARD);
-			spark.config().setDocumentTitle("Selenium Testing Framework");
-			spark.config().setReportName("Selenium Testing Framework");
+			
+			  spark.config().setTheme(Theme.STANDARD);
+			  spark.config().setDocumentTitle("Selenium Testing Framework");
+			  spark.config().setReportName("Selenium Testing Framework");
+			 
 		}
 	}
 
+	
 	public static void createTest(String testcasename) {
 
 		ExtentReportManager.setExtentTest(extent.createTest(testcasename));
 	}
+
+	
 
 	public static void flushReport() throws Exception {
 		if (Objects.nonNull(extent)) {
